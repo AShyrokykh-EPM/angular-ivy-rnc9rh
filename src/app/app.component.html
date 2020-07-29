@@ -1,4 +1,12 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div style="margin: 40px auto; width: 60%; height: 500px;"> 
+    <ag-grid-angular
+        style="width:100%; height: 500px;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [suppressBrowserResizeObserver]="true"
+        (gridSizeChanged)="onGridSizeChanged($event)"
+        (firstDataRendered)="onFirstDataRendered($event)"
+        >
+    </ag-grid-angular>
+</div>
